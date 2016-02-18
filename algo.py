@@ -37,7 +37,7 @@ def bod_quiz_algo(value):
                 result.append(float(values * values)) # Square of the value
             elif values in case_b:
                 result.append(float(values ** (1/2))) # Sqrt of the value
-            else :
+            else:
                 raise TypeError("Invalid value passed to bod_quiz_algo.")
 
     return result
