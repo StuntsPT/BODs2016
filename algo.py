@@ -29,15 +29,20 @@ def bod_quiz_algo(value):
     case_c = (6, 7, 8)
 
     if value == case_c:
-        result = [float(x / 9) for x in value]
+        result = [float(x / 9) for x in value] # Solve case_c in one strike.
     else:
         result = []
         for values in value:
             if values in case_a:
-                result.append(float(values * values)) # Square of the value
+                result.append(float(values * values)) # Square of the value.
             elif values in case_b:
-                result.append(float(values ** (1/2))) # Sqrt of the value
+                result.append(float(values ** (1/2))) # Sqrt of the value.
             else:
-                raise TypeError("Invalid value passed to bod_quiz_algo.")
+                err_string = "Invalid value passed to bod_quiz_algo. The "\
+                             "value '" + str(values) + "' is invalid."
+                raise TypeError(err_string)
 
     return result
+
+
+#print(bod_quiz_algo((1,2,3,4,5)))
